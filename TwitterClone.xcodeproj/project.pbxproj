@@ -56,6 +56,12 @@
 		549AE63224DA607E004C6F1E /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				549AE65024DA8FAE004C6F1E /* Model */,
+				549AE65524DA8FCC004C6F1E /* View */,
+				549AE65224DA8FB7004C6F1E /* ViewModel */,
+				549AE65124DA8FB2004C6F1E /* Controller */,
+				549AE65324DA8FBD004C6F1E /* API */,
+				549AE65424DA8FBF004C6F1E /* Utils */,
 				549AE63324DA607E004C6F1E /* AppDelegate.swift */,
 				549AE63524DA607E004C6F1E /* SceneDelegate.swift */,
 				549AE63724DA607E004C6F1E /* ViewController.swift */,
@@ -65,6 +71,48 @@
 				549AE64124DA6080004C6F1E /* Info.plist */,
 			);
 			path = TwitterClone;
+			sourceTree = "<group>";
+		};
+		549AE65024DA8FAE004C6F1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		549AE65124DA8FB2004C6F1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		549AE65224DA8FB7004C6F1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		549AE65324DA8FBD004C6F1E /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		549AE65424DA8FBF004C6F1E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		549AE65524DA8FCC004C6F1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
