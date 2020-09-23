@@ -10,6 +10,16 @@ import UIKit
 
 class RegistrationController: UIViewController {
   // MARK: - Properties
+  private let plusPhotoButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setImage(UIImage(named: "plus_photo"), for: .normal)
+    button.tintColor = .white
+    button.addTarget(self, action: #selector(handleAddProfilePhoto), for: .touchUpInside)
+    return button
+  }()
+  
+  
+  
   private let alreadyHaveAccountButton: UIButton = {
     let button = Utilities().attributeButton("Already have an account", " Log In")
     button.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
@@ -22,6 +32,10 @@ class RegistrationController: UIViewController {
   }
   
   // MARK: - Selectors
+  @objc func handleAddProfilePhoto() {
+    print("handleAddProfilePhoto")
+  }
+  
   @objc func handleShowLogin() {
     navigationController?.popViewController(animated: true)
   }
@@ -30,11 +44,17 @@ class RegistrationController: UIViewController {
   func configureUI() {
     view.backgroundColor = .twitterBlue
     
+    view.addSubview(plusPhotoButton)
+    plusPhotoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
+    plusPhotoButton.setDimensions(width: 128, height: 128)
+    
+    
+    
     view.addSubview(alreadyHaveAccountButton)
     alreadyHaveAccountButton.anchor(left: view.leftAnchor,
-                                 bottom: view.safeAreaLayoutGuide.bottomAnchor,
-                                 right: view.rightAnchor,
-                                 paddingLeft: 40,
-                                 paddingRight: 40)
+                                    bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                    right: view.rightAnchor,
+                                    paddingLeft: 40,
+                                    paddingRight: 40)
   }
 }
