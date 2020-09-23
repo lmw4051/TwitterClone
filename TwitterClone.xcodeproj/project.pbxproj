@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0ED3E20865ED6CC6615B1113 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9D75A942099203499B06AF /* Pods_TwitterClone.framework */; };
+		543B5D70251B37520003AB2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B5D6F251B37510003AB2B /* Constants.swift */; };
 		545EE3AD251B168700A653A6 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EE3AC251B168700A653A6 /* RegistrationController.swift */; };
 		545EE3AF251B2BF800A653A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 545EE3AE251B2BF800A653A6 /* GoogleService-Info.plist */; };
 		545F265924DB943D00369D47 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F265824DB943D00369D47 /* Utilities.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		543B5D6F251B37510003AB2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		545EE3AC251B168700A653A6 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		545EE3AE251B2BF800A653A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		545F265824DB943D00369D47 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				549AE66824DA9EC0004C6F1E /* Extensions.swift */,
 				545F265824DB943D00369D47 /* Utilities.swift */,
+				543B5D6F251B37510003AB2B /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -171,7 +174,6 @@
 				D721E307B31EC2C801825E49 /* Pods-TwitterClone.debug.xcconfig */,
 				E0D5CC614EF1F5562541B589 /* Pods-TwitterClone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -302,6 +304,7 @@
 				549AE65724DA9071004C6F1E /* MainTabController.swift in Sources */,
 				545F265924DB943D00369D47 /* Utilities.swift in Sources */,
 				549AE66124DA94E1004C6F1E /* FeedController.swift in Sources */,
+				543B5D70251B37520003AB2B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
