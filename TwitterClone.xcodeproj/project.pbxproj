@@ -26,6 +26,7 @@
 		549AE66924DA9EC0004C6F1E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AE66824DA9EC0004C6F1E /* Extensions.swift */; };
 		549AE66C24DAB2E6004C6F1E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AE66B24DAB2E6004C6F1E /* LoginController.swift */; };
 		54B6903E251B8644000F66D0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B6903D251B8644000F66D0 /* UserService.swift */; };
+		54B69040251B88E7000F66D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B6903F251B88E7000F66D0 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		549AE66824DA9EC0004C6F1E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		549AE66B24DAB2E6004C6F1E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		54B6903D251B8644000F66D0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = TwitterClone/Utils/UserService.swift; sourceTree = SOURCE_ROOT; };
+		54B6903F251B88E7000F66D0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = TwitterClone/Utils/User.swift; sourceTree = SOURCE_ROOT; };
 		D721E307B31EC2C801825E49 /* Pods-TwitterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.debug.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D5CC614EF1F5562541B589 /* Pods-TwitterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.release.xcconfig"; path = "Target Support Files/Pods-TwitterClone/Pods-TwitterClone.release.xcconfig"; sourceTree = "<group>"; };
 		EC9D75A942099203499B06AF /* Pods_TwitterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 		549AE65024DA8FAE004C6F1E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				54B6903F251B88E7000F66D0 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				549AE66C24DAB2E6004C6F1E /* LoginController.swift in Sources */,
 				549AE66324DA94F6004C6F1E /* ExploreController.swift in Sources */,
 				543B5D72251B3C680003AB2B /* AuthService.swift in Sources */,
+				54B69040251B88E7000F66D0 /* User.swift in Sources */,
 				545EE3AD251B168700A653A6 /* RegistrationController.swift in Sources */,
 				549AE63624DA607E004C6F1E /* SceneDelegate.swift in Sources */,
 				549AE65724DA9071004C6F1E /* MainTabController.swift in Sources */,
