@@ -12,7 +12,7 @@ struct User {
   let fullName: String
   let email: String
   let userName: String
-  let profileImageUrl: String
+  var profileImageUrl: URL?
   let uid: String
   
   init(uid: String, dictionary: [String: AnyObject]) {
@@ -21,6 +21,10 @@ struct User {
     self.fullName = dictionary["fullName"] as? String ?? ""
     self.email = dictionary["email"] as? String ?? ""
     self.userName = dictionary["userName"] as? String ?? ""
-    self.profileImageUrl = dictionary["profileImageUrl"] as? String ?? ""
+    
+    if let profileImageUrlString = dictionary["profileImageUrl"] as? String {
+      guard let url = URL(string: profileImageUrlString) else { return }
+      self.profileImageUrl = url
+    }
   }
 }
