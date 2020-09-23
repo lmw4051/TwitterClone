@@ -10,6 +10,12 @@ import UIKit
 
 class TweetCell: UICollectionViewCell {
   // MARK: - Properties
+  var tweet: Tweet? {
+    didSet {
+      configure()
+    }
+  }
+  
   private let profileImageView: UIImageView = {
     let iv = UIImageView()
     iv.contentMode = .scaleAspectFit
@@ -135,4 +141,9 @@ class TweetCell: UICollectionViewCell {
     
   }
   // MARK: - Helpers
+  func configure() {
+    guard let tweet = tweet else { return }
+    
+    captionLabel.text = tweet.caption
+  }
 }
