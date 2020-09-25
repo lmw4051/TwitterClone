@@ -46,7 +46,7 @@ class ProfileController: UICollectionViewController {
   // MARK: - API
   func fetchTweets() {
     TweetService.shared.fetchTweets(forUser: user) { tweets in
-      
+      self.tweets = tweets
     }
   }
   
