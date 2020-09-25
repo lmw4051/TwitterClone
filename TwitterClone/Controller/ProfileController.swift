@@ -43,6 +43,12 @@ class ProfileController: UICollectionViewController {
     navigationController?.navigationBar.isHidden = true
   }
   
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    navigationController?.navigationBar.barStyle = .default
+    navigationController?.navigationBar.isHidden = false
+  }
+  
   // MARK: - API
   func fetchTweets() {
     TweetService.shared.fetchTweets(forUser: user) { tweets in
@@ -97,5 +103,11 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 extension ProfileController: ProfileHeaderDelegate {
   func handleDismissal() {
     navigationController?.popViewController(animated: true)
+  }
+  
+  func handleEditProfileFollow(_ header: ProfileHeader) {
+    UserService.shared.followUser(uid: user.uid) { (ref, err) in
+      
+    }
   }
 }
