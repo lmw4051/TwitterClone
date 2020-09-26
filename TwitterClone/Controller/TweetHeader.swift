@@ -10,6 +10,11 @@ import UIKit
 
 class TweetHeader: UICollectionReusableView {
   // MARK: - Properties
+  var tweet: Tweet? {
+    didSet {
+      configure()
+    }
+  }
   
   private lazy var profileImageView: UIImageView = {
     let iv = UIImageView()
@@ -65,19 +70,8 @@ class TweetHeader: UICollectionReusableView {
     return button
   }()
   
-  private lazy var reTweetsLabel: UILabel = {
-    let label = UILabel()
-    label.font = UIFont.systemFont(ofSize: 14)
-    label.text = "2 ReTweets"
-    return label
-  }()
-  
-  private lazy var likesLabel: UILabel = {
-    let label = UILabel()
-    label.font = UIFont.systemFont(ofSize: 14)
-    label.text = "0 Likes"
-    return label
-  }()
+  private lazy var reTweetsLabel = UILabel()
+  private lazy var likesLabel = UILabel()
   
   private lazy var statsView: UIView = {
     let view = UIView()    
@@ -226,5 +220,17 @@ class TweetHeader: UICollectionReusableView {
     button.tintColor = .darkGray
     button.setDimensions(width: 20, height: 20)
     return button
+  }
+  
+  func configure() {
+    guard let tweet = tweet else { return }
+    let viewModel = TweetViewModel(tweet: tweet)
+    captionLabel.text = tweet.caption
+    fullNameLabel.text = tweet.user.fullName
+    userNameLabel.text = viewModel.userNameText
+    profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+    dateLabel.text = viewModel.headerTimeStamp
+    reTweetsLabel.attributedText = viewModel.reTweetsAttributedString
+    likesLabel.attributedText = viewModel.likesAttributedString
   }
 }
