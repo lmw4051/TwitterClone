@@ -35,6 +35,7 @@ class ProfileController: UICollectionViewController {
     super.viewDidLoad()
     configureCollectionView()
     fetchTweets()
+    checkIfUserIsFollowed()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +56,15 @@ class ProfileController: UICollectionViewController {
       self.tweets = tweets
     }
   }
+  
+  func checkIfUserIsFollowed() {
+    UserService.shared.checkIfUserIsFollowed(uid: user.uid) { isFollowed in
+      self.user.isFollowed = isFollowed
+      self.collectionView.reloadData()
+    }
+  }
+  
+  // MARK: - Helpers
   
   func configureCollectionView() {
     collectionView.backgroundColor = .white
@@ -106,17 +116,20 @@ extension ProfileController: ProfileHeaderDelegate {
   }
   
   func handleEditProfileFollow(_ header: ProfileHeader) {
-    print("DEBUG: User is followed is \(user.isFollowed) before button tap")
+    if user.isCurrentUser {
+      print("DEBUG: Show edit profile controller")
+      return
+    }
     
     if user.isFollowed {
       UserService.shared.unfollowerUser(uid: user.uid) { (err, ref) in
         self.user.isFollowed = false
-        print("DEBUG: User is followed is \(self.user.isFollowed) after button tap")
+        header.editProfileFollowButton.setTitle("Follow", for: .normal)
       }      
     } else {
       UserService.shared.followUser(uid: user.uid) { (ref, err) in
         self.user.isFollowed = true
-        print("DEBUG: User is followed is \(self.user.isFollowed) after button tap")
+        header.editProfileFollowButton.setTitle("Following", for: .normal)
       }
     }    
   }
