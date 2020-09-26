@@ -150,14 +150,14 @@ class TweetHeader: UICollectionReusableView {
     captionLabel.anchor(top: stack.bottomAnchor,
                         left: leftAnchor,
                         right: rightAnchor,
-                        paddingTop: 20,
+                        paddingTop: 12,
                         paddingLeft: 16,
                         paddingRight: 16)
     
     addSubview(dateLabel)
     dateLabel.anchor(top: captionLabel.bottomAnchor,
                      left: leftAnchor,
-                     paddingTop: 20,
+                     paddingTop: 12,
                      paddingLeft: 16)
     
     addSubview(optionsButton)
