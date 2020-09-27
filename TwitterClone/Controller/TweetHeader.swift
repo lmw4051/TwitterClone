@@ -33,7 +33,6 @@ class TweetHeader: UICollectionReusableView {
   private let fullNameLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.boldSystemFont(ofSize: 14)
-    label.text = "Peter Parker"
     return label
   }()
   
@@ -41,7 +40,6 @@ class TweetHeader: UICollectionReusableView {
     let label = UILabel()
     label.font = UIFont.boldSystemFont(ofSize: 14)
     label.textColor = .lightGray
-    label.text = "Spider Man"
     return label
   }()
   
@@ -49,7 +47,6 @@ class TweetHeader: UICollectionReusableView {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 20)
     label.numberOfLines = 0
-    label.text = "Some test caption from spiderman for now"
     return label
   }()
   
@@ -58,7 +55,6 @@ class TweetHeader: UICollectionReusableView {
     label.textColor = .lightGray
     label.font = UIFont.systemFont(ofSize: 14)
     label.textAlignment = .left
-    label.text = "6:33pm - 1/28/2020"
     return label
   }()
   
@@ -180,8 +176,8 @@ class TweetHeader: UICollectionReusableView {
     
     addSubview(actionStack)
     actionStack.centerX(inView: self)
-    actionStack.anchor(bottom: bottomAnchor,
-                       paddingBottom: 12)
+    actionStack.anchor(top: statsView.bottomAnchor,
+                       paddingTop: 16)
   }
   
   required init?(coder: NSCoder) {

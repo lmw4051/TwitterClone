@@ -73,7 +73,7 @@ struct TweetViewModel {
     measurementLabel.numberOfLines = 0
     measurementLabel.lineBreakMode = .byWordWrapping
     measurementLabel.translatesAutoresizingMaskIntoConstraints = false
-    measurementLabel.widthAnchor.constraint(equalToConstant: width).isActive = true    
+    measurementLabel.widthAnchor.constraint(equalToConstant: width).isActive = true        
     return measurementLabel.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
   }
 }

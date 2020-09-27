@@ -195,11 +195,11 @@
 			isa = PBXGroup;
 			children = (
 				54B69043251B9AB4000F66D0 /* CaptionTextView.swift */,
-				54B69049251BE4E0000F66D0 /* TweetCell.swift */,
 				54B6904F251CF49E000F66D0 /* ProfileHeader.swift */,
 				54B69051251CFE92000F66D0 /* ProfileFilterView.swift */,
 				54B69053251D004B000F66D0 /* ProfileFilterCell.swift */,
 				54B69057251DED4D000F66D0 /* UserCell.swift */,
+				54B69049251BE4E0000F66D0 /* TweetCell.swift */,
 				54B6905D251F35F8000F66D0 /* TweetHeader.swift */,
 			);
 			path = View;
