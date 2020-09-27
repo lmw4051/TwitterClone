@@ -67,8 +67,7 @@ class FeedController: UICollectionViewController {
 
 // MARK: - UICollectionViewDelegate/DataSource
 extension FeedController {
-  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    print("DEBUG: Tweet count at time of collection function call is \(tweets.count)")
+  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {    
     return tweets.count
   }
   

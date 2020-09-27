@@ -39,9 +39,7 @@ struct TweetService {
       guard let dictionary = snapshot.value as? [String: Any] else { return }
       guard let uid = dictionary["uid"] as? String else { return }
       let tweetID = snapshot.key
-      
-      print(dictionary)
-      
+            
       UserService.shared.fetchUser(uid: uid) { user in
         let tweet = Tweet(user: user, tweetID: tweetID, dictionary: dictionary)        
         tweets.append(tweet)
