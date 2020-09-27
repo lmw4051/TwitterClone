@@ -67,7 +67,7 @@ class FeedController: UICollectionViewController {
 
 // MARK: - UICollectionViewDelegate/DataSource
 extension FeedController {
-  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {    
+  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return tweets.count
   }
   
@@ -108,5 +108,15 @@ extension FeedController: TweetCellDelegate {
     let nav = UINavigationController(rootViewController: controller)
     nav.modalPresentationStyle = .fullScreen
     present(nav, animated: true, completion: nil)
+  }
+  
+  func handleLikeTapped(_ cell: TweetCell) {
+    guard let tweet = cell.tweet else { return }
+    
+    TweetService.shared.likeTweet(tweet: tweet) { (err, ref) in
+      cell.tweet?.didLike.toggle()
+      let likes = tweet.didLike ? tweet.likes - 1 : tweet.likes + 1
+      cell.tweet?.likes = likes
+    }
   }
 }
