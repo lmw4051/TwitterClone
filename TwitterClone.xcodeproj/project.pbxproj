@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0ED3E20865ED6CC6615B1113 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9D75A942099203499B06AF /* Pods_TwitterClone.framework */; };
+		5430546925206E4E00ABD549 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */; };
 		543B5D70251B37520003AB2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B5D6F251B37510003AB2B /* Constants.swift */; };
 		543B5D72251B3C680003AB2B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B5D71251B3C680003AB2B /* AuthService.swift */; };
 		545EE3AD251B168700A653A6 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EE3AC251B168700A653A6 /* RegistrationController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		543B5D6F251B37510003AB2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		543B5D71251B3C680003AB2B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = TwitterClone/Utils/AuthService.swift; sourceTree = SOURCE_ROOT; };
 		545EE3AC251B168700A653A6 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				549AE66824DA9EC0004C6F1E /* Extensions.swift */,
 				545F265824DB943D00369D47 /* Utilities.swift */,
 				543B5D6F251B37510003AB2B /* Constants.swift */,
+				5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				549AE66124DA94E1004C6F1E /* FeedController.swift in Sources */,
 				54B69052251CFE92000F66D0 /* ProfileFilterView.swift in Sources */,
 				543B5D70251B37520003AB2B /* Constants.swift in Sources */,
+				5430546925206E4E00ABD549 /* ActionSheetLauncher.swift in Sources */,
 				54B69048251BA562000F66D0 /* Tweet.swift in Sources */,
 				54B69046251B9F7A000F66D0 /* TweetService.swift in Sources */,
 			);
