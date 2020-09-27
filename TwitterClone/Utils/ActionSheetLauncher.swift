@@ -80,9 +80,7 @@ class ActionSheetLauncher: NSObject {
     tableView.frame.origin.y = y
   }
   
-  func show() {
-    print("Show action sheet for user \(user.userName)")
-    
+  func show() {    
     guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
     self.window = window
     
