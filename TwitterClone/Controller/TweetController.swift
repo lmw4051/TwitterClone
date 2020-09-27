@@ -14,7 +14,7 @@ private let headerIdentifier = "TweetHeader"
 class TweetController: UICollectionViewController {
   // MARK: - Properties
   private let tweet: Tweet
-  private let actionSheetLauncher: ActionSheetLauncher
+  private var actionSheetLauncher: ActionSheetLauncher!
   private var replies = [Tweet]() {
     didSet {
       collectionView.reloadData()
@@ -24,7 +24,6 @@ class TweetController: UICollectionViewController {
   // MARK: - Lifecycle
   init(tweet: Tweet) {
     self.tweet = tweet
-    self.actionSheetLauncher = ActionSheetLauncher(user: tweet.user)
     super.init(collectionViewLayout: UICollectionViewFlowLayout())
   }
   
@@ -90,8 +89,28 @@ extension TweetController: UICollectionViewDelegateFlowLayout {
   }
 }
 
+// MARK: - TweetHeaderDelegate
 extension TweetController: TweetHeaderDelegate {
   func showActionSheet() {
-    actionSheetLauncher.show()
+    if tweet.user.isCurrentUser {
+      actionSheetLauncher = ActionSheetLauncher(user: tweet.user)
+      actionSheetLauncher.delegate = self
+      actionSheetLauncher.show()
+    } else {
+      UserService.shared.checkIfUserIsFollowed(uid: tweet.user.uid) { isFollowed in
+        var user = self.tweet.user
+        user.isFollowed = isFollowed
+        self.actionSheetLauncher = ActionSheetLauncher(user: user)
+        self.actionSheetLauncher.delegate = self
+        self.actionSheetLauncher.show()
+      }
+    }
+  }
+}
+
+// MARK: - ActionSheetLauncherDelegate
+extension TweetController: ActionSheetLauncherDelegate {
+  func didSelect(option: ActionSheetOptions) {
+    print("DEBUG: Option in controller is \(option.description)")
   }
 }
