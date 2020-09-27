@@ -10,6 +10,7 @@
 		0ED3E20865ED6CC6615B1113 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9D75A942099203499B06AF /* Pods_TwitterClone.framework */; };
 		5430546925206E4E00ABD549 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */; };
 		5430546B2520787300ABD549 /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546A2520787300ABD549 /* ActionSheetCell.swift */; };
+		5430546D25207EB000ABD549 /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546C25207EB000ABD549 /* ActionSheetViewModel.swift */; };
 		543B5D70251B37520003AB2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B5D6F251B37510003AB2B /* Constants.swift */; };
 		543B5D72251B3C680003AB2B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B5D71251B3C680003AB2B /* AuthService.swift */; };
 		545EE3AD251B168700A653A6 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EE3AC251B168700A653A6 /* RegistrationController.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		5430546A2520787300ABD549 /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionSheetCell.swift; path = TwitterClone/Utils/ActionSheetCell.swift; sourceTree = SOURCE_ROOT; };
+		5430546C25207EB000ABD549 /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionSheetViewModel.swift; path = TwitterClone/Utils/ActionSheetViewModel.swift; sourceTree = SOURCE_ROOT; };
 		543B5D6F251B37510003AB2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		543B5D71251B3C680003AB2B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = TwitterClone/Utils/AuthService.swift; sourceTree = SOURCE_ROOT; };
 		545EE3AC251B168700A653A6 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				54B6904B251C0441000F66D0 /* TweetViewModel.swift */,
 				54B69055251DA2FD000F66D0 /* ProfileHeaderViewModel.swift */,
 				54B6905F251F8F90000F66D0 /* UploadTweetViewModel.swift */,
+				5430546C25207EB000ABD549 /* ActionSheetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				549AE65724DA9071004C6F1E /* MainTabController.swift in Sources */,
 				54B6905E251F35F8000F66D0 /* TweetHeader.swift in Sources */,
 				54B6904C251C0441000F66D0 /* TweetViewModel.swift in Sources */,
+				5430546D25207EB000ABD549 /* ActionSheetViewModel.swift in Sources */,
 				545F265924DB943D00369D47 /* Utilities.swift in Sources */,
 				549AE66124DA94E1004C6F1E /* FeedController.swift in Sources */,
 				54B69052251CFE92000F66D0 /* ProfileFilterView.swift in Sources */,
