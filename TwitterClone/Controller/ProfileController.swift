@@ -154,6 +154,11 @@ extension ProfileController: ProfileHeaderDelegate {
         
         NotificationService.shared.uploadNotification(type: .follow, user: self.user)
       }
-    }    
+    }
+  }
+  
+  func didSelect(filter: ProfileFilterOptions) {
+    print("Did select filter \(filter.description) in profile controller")
+    self.selectedFilter = filter
   }
 }
