@@ -10,11 +10,19 @@ import UIKit
 
 private let reuseIdentifier = "EditProfileCell"
 
+protocol EditProfileControllerDelegate: class {
+  func controller(_ controller: EditProfileController, wantsToUpdate user: User)
+}
+
 class EditProfileController: UITableViewController {
   // MARK: - Properties
   private var user: User
   private lazy var headerView = EditProfileHeader(user: user)
   private let imagePicker = UIImagePickerController()
+  
+  private var userInfoChanged = false
+  weak var delegate: EditProfileControllerDelegate?
+  
   private var selectedImage: UIImage? {
     didSet {
       headerView.profileImageView.image = selectedImage
@@ -51,9 +59,16 @@ class EditProfileController: UITableViewController {
   }
   
   @objc func handleDone() {
-    dismiss(animated: true, completion: nil)
+    updateUserData()
   }
   // MARK: - API
+  func updateUserData() {
+    UserService.shared.saveUserData(user: user) { (err, ref) in
+      print("Did update user info")
+      self.delegate?.controller(self, wantsToUpdate: self.user)
+    }
+  }
+  
   // MARK: - Helpers
   func configureNavigationBar() {
     navigationController?.navigationBar.barTintColor = .twitterBlue
@@ -100,6 +115,7 @@ extension EditProfileController {
   }
 }
 
+// MARK: - UITableViewDelegate
 extension EditProfileController {
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     guard let option = EditProfileOptions(rawValue: indexPath.row) else { return 0 }
@@ -123,9 +139,13 @@ extension EditProfileController: UIImagePickerControllerDelegate, UINavigationCo
   }
 }
 
+// MARK: - EditProfileCellDelegate
 extension EditProfileController: EditProfileCellDelegate {
   func updateUserInfo(_ cell: EditProfileCell) {
     guard let viewModel = cell.viewModel else { return }
+    userInfoChanged = true
+    navigationItem.rightBarButtonItem?.isEnabled = true
+    
     switch viewModel.option {
     case .fullName:
       guard let fullName = cell.infoTextField.text else { return }
@@ -136,9 +156,5 @@ extension EditProfileController: EditProfileCellDelegate {
     case .bio:
       user.bio = cell.bioTextView.text
     }
-    
-    print("FullName is \(user.fullName)")
-    print("UserName is \(user.userName)")
-    print("Bio is \(user.bio)")
   }
 }

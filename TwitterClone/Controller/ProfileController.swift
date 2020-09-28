@@ -162,6 +162,7 @@ extension ProfileController: ProfileHeaderDelegate {
   func handleEditProfileFollow(_ header: ProfileHeader) {
     if user.isCurrentUser {
       let controller = EditProfileController(user: user)
+      controller.delegate = self
       let nav = UINavigationController(rootViewController: controller)
       nav.modalPresentationStyle = .fullScreen
       present(nav, animated: true, completion: nil)
@@ -186,5 +187,14 @@ extension ProfileController: ProfileHeaderDelegate {
   func didSelect(filter: ProfileFilterOptions) {
     print("Did select filter \(filter.description) in profile controller")
     self.selectedFilter = filter
+  }
+}
+
+// MARK: - EditProfileControllerDelegate
+extension ProfileController: EditProfileControllerDelegate {
+  func controller(_ controller: EditProfileController, wantsToUpdate user: User) {
+    controller.dismiss(animated: true, completion: nil)
+    self.user = user
+    self.collectionView.reloadData()
   }
 }
