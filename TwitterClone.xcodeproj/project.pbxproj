@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0ED3E20865ED6CC6615B1113 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9D75A942099203499B06AF /* Pods_TwitterClone.framework */; };
 		5423B1732521A98700AFCC42 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423B1722521A98700AFCC42 /* NotificationCell.swift */; };
+		5423B1752521B22100AFCC42 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423B1742521B22100AFCC42 /* NotificationViewModel.swift */; };
 		5430546925206E4E00ABD549 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */; };
 		5430546B2520787300ABD549 /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546A2520787300ABD549 /* ActionSheetCell.swift */; };
 		5430546D25207EB000ABD549 /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546C25207EB000ABD549 /* ActionSheetViewModel.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		5423B1722521A98700AFCC42 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationCell.swift; path = TwitterClone/Utils/NotificationCell.swift; sourceTree = SOURCE_ROOT; };
+		5423B1742521B22100AFCC42 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationViewModel.swift; path = TwitterClone/Utils/NotificationViewModel.swift; sourceTree = SOURCE_ROOT; };
 		5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		5430546A2520787300ABD549 /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionSheetCell.swift; path = TwitterClone/Utils/ActionSheetCell.swift; sourceTree = SOURCE_ROOT; };
 		5430546C25207EB000ABD549 /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionSheetViewModel.swift; path = TwitterClone/Utils/ActionSheetViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -181,6 +183,7 @@
 				54B69055251DA2FD000F66D0 /* ProfileHeaderViewModel.swift */,
 				54B6905F251F8F90000F66D0 /* UploadTweetViewModel.swift */,
 				5430546C25207EB000ABD549 /* ActionSheetViewModel.swift */,
+				5423B1742521B22100AFCC42 /* NotificationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				549AE63424DA607E004C6F1E /* AppDelegate.swift in Sources */,
 				5430546B2520787300ABD549 /* ActionSheetCell.swift in Sources */,
 				549AE66924DA9EC0004C6F1E /* Extensions.swift in Sources */,
+				5423B1752521B22100AFCC42 /* NotificationViewModel.swift in Sources */,
 				549AE66C24DAB2E6004C6F1E /* LoginController.swift in Sources */,
 				54B6905C251F3224000F66D0 /* TweetController.swift in Sources */,
 				54B6904E251CEE06000F66D0 /* ProfileController.swift in Sources */,
