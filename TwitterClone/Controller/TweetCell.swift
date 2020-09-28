@@ -97,13 +97,7 @@ class TweetCell: UICollectionViewCell {
     super.init(frame: frame)
     
     backgroundColor = .white
-    
-//    addSubview(profileImageView)
-//    profileImageView.anchor(top: topAnchor,
-//                            left: leftAnchor,
-//                            paddingTop: 8,
-//                            paddingLeft: 8)
-    
+        
     let captionStack = UIStackView(arrangedSubviews: [infoLabel, captionLabel])
     captionStack.axis = .vertical
     captionStack.distribution = .fillProportionally
@@ -122,14 +116,7 @@ class TweetCell: UICollectionViewCell {
     addSubview(stack)
     stack.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor,
     paddingTop: 4, paddingLeft: 12, paddingRight: 12)
-    
-//    addSubview(stack)
-//    stack.anchor(top: profileImageView.topAnchor,
-//                 left: profileImageView.rightAnchor,
-//                 right: rightAnchor,
-//                 paddingLeft: 12,
-//                 paddingRight: 12)
-    
+        
     infoLabel.font = UIFont.systemFont(ofSize: 14)
     infoLabel.text = "Eddie Brock @venom"
     
