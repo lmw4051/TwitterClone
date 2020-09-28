@@ -38,20 +38,20 @@ class TweetHeader: UICollectionReusableView {
   
   private let fullNameLabel: UILabel = {
     let label = UILabel()
-    label.font = UIFont.boldSystemFont(ofSize: 14)
+    label.font = .boldSystemFont(ofSize: 14)
     return label
   }()
   
   private let userNameLabel: UILabel = {
     let label = UILabel()
-    label.font = UIFont.boldSystemFont(ofSize: 14)
+    label.font = .boldSystemFont(ofSize: 14)
     label.textColor = .lightGray
     return label
   }()
   
   private let captionLabel: UILabel = {
     let label = UILabel()
-    label.font = UIFont.systemFont(ofSize: 20)
+    label.font = .systemFont(ofSize: 20)
     label.numberOfLines = 0
     return label
   }()
@@ -59,7 +59,7 @@ class TweetHeader: UICollectionReusableView {
   private let dateLabel: UILabel = {
     let label = UILabel()
     label.textColor = .lightGray
-    label.font = UIFont.systemFont(ofSize: 14)
+    label.font = .systemFont(ofSize: 14)
     label.textAlignment = .left
     return label
   }()
@@ -75,7 +75,7 @@ class TweetHeader: UICollectionReusableView {
   private let replyLabel: UILabel = {
     let label = UILabel()
     label.textColor = .lightGray
-    label.font = UIFont.systemFont(ofSize: 12)
+    label.font = .systemFont(ofSize: 12)
     return label
   }()
   

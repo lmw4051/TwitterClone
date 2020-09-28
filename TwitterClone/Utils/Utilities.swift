@@ -46,7 +46,7 @@ class Utilities {
     let tf = UITextField()
     tf.placeholder = placeholder
     tf.textColor = .white
-    tf.font = UIFont.systemFont(ofSize: 16)
+    tf.font = .systemFont(ofSize: 16)
     tf.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     return tf
   }
@@ -58,7 +58,7 @@ class Utilities {
     button.backgroundColor = .white
     button.heightAnchor.constraint(equalToConstant: 50).isActive = true
     button.layer.cornerRadius = 5
-    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+    button.titleLabel?.font = .boldSystemFont(ofSize: 20)
     return button
   }
   

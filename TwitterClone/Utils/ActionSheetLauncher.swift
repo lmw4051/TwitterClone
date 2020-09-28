@@ -36,7 +36,7 @@ class ActionSheetLauncher: NSObject {
   private lazy var cancelButton: UIButton = {
     let button = UIButton(type: .system)
     button.setTitle("Cancel", for: .normal)
-    button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+    button.titleLabel?.font = .systemFont(ofSize: 18)
     button.setTitleColor(.black, for: .normal)
     button.backgroundColor = .systemGroupedBackground
     button.addTarget(self, action: #selector(handleDismissal), for: .touchUpInside)

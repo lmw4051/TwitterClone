@@ -42,7 +42,7 @@ class UploadTweetController: UIViewController {
   
   private lazy var replyLabel: UILabel = {
     let label = UILabel()
-    label.font = UIFont.systemFont(ofSize: 14)
+    label.font = .systemFont(ofSize: 14)
     label.textColor = .lightGray
     label.text = "replying to @spiderman"
     label.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true

@@ -61,27 +61,27 @@ class ProfileHeader: UICollectionReusableView {
     button.layer.borderColor = UIColor.twitterBlue.cgColor
     button.layer.borderWidth = 1.25
     button.setTitleColor(.twitterBlue, for: .normal)
-    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+    button.titleLabel?.font = .boldSystemFont(ofSize: 14)
     button.addTarget(self, action: #selector(handleEditProfileFollow), for: .touchUpInside)
     return button
   }()
   
   private let fullNameLabel: UILabel = {
     let label = UILabel()
-    label.font = UIFont.boldSystemFont(ofSize: 20)
+    label.font = .boldSystemFont(ofSize: 20)
     return label
   }()
   
   private let userNameLabel: UILabel = {
     let label = UILabel()
-    label.font = UIFont.boldSystemFont(ofSize: 16)
+    label.font = .boldSystemFont(ofSize: 16)
     label.textColor = .lightGray
     return label
   }()
   
   private let bioLabel: UILabel = {
     let label = UILabel()
-    label.font = UIFont.systemFont(ofSize: 16)
+    label.font = .systemFont(ofSize: 16)
     label.numberOfLines = 3
     label.text = "This is a user bio that will span more than one line for test purposes"
     return label
