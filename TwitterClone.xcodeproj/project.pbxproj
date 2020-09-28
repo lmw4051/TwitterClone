@@ -10,6 +10,7 @@
 		0ED3E20865ED6CC6615B1113 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9D75A942099203499B06AF /* Pods_TwitterClone.framework */; };
 		5423B1732521A98700AFCC42 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423B1722521A98700AFCC42 /* NotificationCell.swift */; };
 		5423B1752521B22100AFCC42 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423B1742521B22100AFCC42 /* NotificationViewModel.swift */; };
+		5423B177252233BD00AFCC42 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423B176252233BD00AFCC42 /* EditProfileController.swift */; };
 		5430546925206E4E00ABD549 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */; };
 		5430546B2520787300ABD549 /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546A2520787300ABD549 /* ActionSheetCell.swift */; };
 		5430546D25207EB000ABD549 /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546C25207EB000ABD549 /* ActionSheetViewModel.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		5423B1722521A98700AFCC42 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationCell.swift; path = TwitterClone/Utils/NotificationCell.swift; sourceTree = SOURCE_ROOT; };
 		5423B1742521B22100AFCC42 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationViewModel.swift; path = TwitterClone/Utils/NotificationViewModel.swift; sourceTree = SOURCE_ROOT; };
+		5423B176252233BD00AFCC42 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		5430546A2520787300ABD549 /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionSheetCell.swift; path = TwitterClone/Utils/ActionSheetCell.swift; sourceTree = SOURCE_ROOT; };
 		5430546C25207EB000ABD549 /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionSheetViewModel.swift; path = TwitterClone/Utils/ActionSheetViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -172,6 +174,7 @@
 				54B69041251B94A0000F66D0 /* UploadTweetController.swift */,
 				54B6904D251CEE06000F66D0 /* ProfileController.swift */,
 				54B6905B251F3224000F66D0 /* TweetController.swift */,
+				5423B176252233BD00AFCC42 /* EditProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				549AE66724DA9508004C6F1E /* ConversationsController.swift in Sources */,
 				54B69058251DED4D000F66D0 /* UserCell.swift in Sources */,
 				549AE63424DA607E004C6F1E /* AppDelegate.swift in Sources */,
+				5423B177252233BD00AFCC42 /* EditProfileController.swift in Sources */,
 				5430546B2520787300ABD549 /* ActionSheetCell.swift in Sources */,
 				549AE66924DA9EC0004C6F1E /* Extensions.swift in Sources */,
 				5423B1752521B22100AFCC42 /* NotificationViewModel.swift in Sources */,

@@ -58,13 +58,7 @@ class ProfileController: UICollectionViewController {
     navigationController?.navigationBar.barStyle = .black
     navigationController?.navigationBar.isHidden = true
   }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    navigationController?.navigationBar.barStyle = .default
-    navigationController?.navigationBar.isHidden = false
-  }
-  
+    
   // MARK: - API
   func fetchTweets() {
     TweetService.shared.fetchTweets(forUser: user) { tweets in
@@ -167,7 +161,10 @@ extension ProfileController: ProfileHeaderDelegate {
   
   func handleEditProfileFollow(_ header: ProfileHeader) {
     if user.isCurrentUser {
-      print("DEBUG: Show edit profile controller")
+      let controller = EditProfileController(user: user)
+      let nav = UINavigationController(rootViewController: controller)
+      nav.modalPresentationStyle = .fullScreen
+      present(nav, animated: true, completion: nil)
       return
     }
     
