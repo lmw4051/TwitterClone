@@ -170,7 +170,7 @@ class ProfileHeader: UICollectionReusableView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  // MARK: - Selector
+  // MARK: - Selectors
   @objc func handleDismissal() {
     delegate?.handleDismissal()
   }
@@ -209,7 +209,7 @@ class ProfileHeader: UICollectionReusableView {
 // MARK: - ProfileFilterViewDelegate
 extension ProfileHeader: ProfileFilterViewDelegate {
   func filterView(_ view: ProfileFilterView, didSelect index: Int) {
-    guard let filter = ProfileFilterOptions(rawValue: index) else { return }    
+    guard let filter = ProfileFilterOptions(rawValue: index) else { return }
     delegate?.didSelect(filter: filter)
   }
 }

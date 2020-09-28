@@ -81,7 +81,7 @@ class NotificationCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
-  // MARK: - Selector
+  // MARK: - Selectors
   @objc func handleProfileImageTapped() {
     delegate?.didTapProfileImage(self)
   }
