@@ -26,6 +26,9 @@ struct ProfileHeaderViewModel {
   private let user: User
   
   let userNameText: String
+  var userBioText: String? {
+    return user.bio
+  }
   
   var followersString: NSAttributedString? {
     return attributedText(withValue: user.stats?.followers ?? 0, text: "followers")

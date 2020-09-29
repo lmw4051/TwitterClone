@@ -14,6 +14,7 @@
 		5423B17A2522385B00AFCC42 /* EditProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423B1792522385B00AFCC42 /* EditProfileHeader.swift */; };
 		5423B17C25223D0400AFCC42 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423B17B25223D0400AFCC42 /* EditProfileViewModel.swift */; };
 		5423B17E25223D5F00AFCC42 /* EditProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423B17D25223D5F00AFCC42 /* EditProfileCell.swift */; };
+		5423B1802523871B00AFCC42 /* EditProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423B17F2523871B00AFCC42 /* EditProfileFooter.swift */; };
 		5430546925206E4E00ABD549 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */; };
 		5430546B2520787300ABD549 /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546A2520787300ABD549 /* ActionSheetCell.swift */; };
 		5430546D25207EB000ABD549 /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430546C25207EB000ABD549 /* ActionSheetViewModel.swift */; };
@@ -62,6 +63,7 @@
 		5423B1792522385B00AFCC42 /* EditProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeader.swift; sourceTree = "<group>"; };
 		5423B17B25223D0400AFCC42 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileViewModel.swift; path = TwitterClone/View/Profile/EditProfileViewModel.swift; sourceTree = SOURCE_ROOT; };
 		5423B17D25223D5F00AFCC42 /* EditProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCell.swift; sourceTree = "<group>"; };
+		5423B17F2523871B00AFCC42 /* EditProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFooter.swift; sourceTree = "<group>"; };
 		5430546825206E4E00ABD549 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		5430546A2520787300ABD549 /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionSheetCell.swift; path = TwitterClone/Utils/ActionSheetCell.swift; sourceTree = SOURCE_ROOT; };
 		5430546C25207EB000ABD549 /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionSheetViewModel.swift; path = TwitterClone/Utils/ActionSheetViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -128,6 +130,7 @@
 				54B6904F251CF49E000F66D0 /* ProfileHeader.swift */,
 				5423B1792522385B00AFCC42 /* EditProfileHeader.swift */,
 				5423B17D25223D5F00AFCC42 /* EditProfileCell.swift */,
+				5423B17F2523871B00AFCC42 /* EditProfileFooter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				5430546D25207EB000ABD549 /* ActionSheetViewModel.swift in Sources */,
 				5423B1732521A98700AFCC42 /* NotificationCell.swift in Sources */,
 				5423B17C25223D0400AFCC42 /* EditProfileViewModel.swift in Sources */,
+				5423B1802523871B00AFCC42 /* EditProfileFooter.swift in Sources */,
 				545F265924DB943D00369D47 /* Utilities.swift in Sources */,
 				549AE66124DA94E1004C6F1E /* FeedController.swift in Sources */,
 				54B69052251CFE92000F66D0 /* ProfileFilterView.swift in Sources */,
