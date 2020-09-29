@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import ActiveLabel
 
 protocol TweetHeaderDelegate: class {
   func showActionSheet()
+  func handleFetchUser(withUserName userName: String)
 }
 
 class TweetHeader: UICollectionReusableView {
@@ -49,10 +51,12 @@ class TweetHeader: UICollectionReusableView {
     return label
   }()
   
-  private let captionLabel: UILabel = {
-    let label = UILabel()
+  private let captionLabel: ActiveLabel = {
+    let label = ActiveLabel()
     label.font = .systemFont(ofSize: 20)
     label.numberOfLines = 0
+    label.mentionColor = .twitterBlue
+    label.hashtagColor = .twitterBlue
     return label
   }()
   
@@ -72,10 +76,11 @@ class TweetHeader: UICollectionReusableView {
     return button
   }()
   
-  private let replyLabel: UILabel = {
-    let label = UILabel()
+  private let replyLabel: ActiveLabel = {
+    let label = ActiveLabel()
     label.textColor = .lightGray
     label.font = .systemFont(ofSize: 12)
+    label.mentionColor = .twitterBlue
     return label
   }()
   
@@ -200,6 +205,8 @@ class TweetHeader: UICollectionReusableView {
     actionStack.centerX(inView: self)
     actionStack.anchor(top: statsView.bottomAnchor,
                        paddingTop: 16)
+    
+    configureMentionHandler()
   }
   
   required init?(coder: NSCoder) {
@@ -232,14 +239,6 @@ class TweetHeader: UICollectionReusableView {
   }
   
   // MARK: - Helpers
-  func createButton(withImageName imageName: String) -> UIButton {
-    let button = UIButton(type: .system)
-    button.setImage(UIImage(named: imageName), for: .normal)
-    button.tintColor = .darkGray
-    button.setDimensions(width: 20, height: 20)
-    return button
-  }
-  
   func configure() {
     guard let tweet = tweet else { return }
     let viewModel = TweetViewModel(tweet: tweet)
@@ -256,5 +255,19 @@ class TweetHeader: UICollectionReusableView {
     
     replyLabel.isHidden = viewModel.shouldHideReplyLabel
     replyLabel.text = viewModel.replyText
+  }
+  
+  func createButton(withImageName imageName: String) -> UIButton {
+    let button = UIButton(type: .system)
+    button.setImage(UIImage(named: imageName), for: .normal)
+    button.tintColor = .darkGray
+    button.setDimensions(width: 20, height: 20)
+    return button
+  }
+  
+  func configureMentionHandler() {
+    captionLabel.handleMentionTap { userName in
+      self.delegate?.handleFetchUser(withUserName: userName)
+    }
   }
 }
