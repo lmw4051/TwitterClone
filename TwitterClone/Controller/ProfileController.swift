@@ -179,7 +179,7 @@ extension ProfileController: ProfileHeaderDelegate {
         self.user.isFollowed = true
         header.editProfileFollowButton.setTitle("Following", for: .normal)
         
-        NotificationService.shared.uploadNotification(type: .follow, user: self.user)
+        NotificationService.shared.uploadNotification(toUser: self.user, type: .follow)
       }
     }
   }
