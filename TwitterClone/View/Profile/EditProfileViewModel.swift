@@ -34,7 +34,7 @@ struct EditProfileViewModel {
     switch option {
     case .fullName: return user.fullName
     case .userName: return user.userName
-    case .bio: return ""
+    case .bio: return user.bio
     }
   }
   
@@ -47,7 +47,7 @@ struct EditProfileViewModel {
   }
   
   var shouldHidePlaceholderLabel: Bool {
-    return "user.bio" != nil
+    return user.bio != nil
   }
   
   init(user: User, option: EditProfileOptions) {

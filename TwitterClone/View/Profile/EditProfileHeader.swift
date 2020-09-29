@@ -64,7 +64,4 @@ class EditProfileHeader: UIView {
   @objc func handleChangeProfilePhoto() {
     delegate?.didTapChangeProfilePhoto()
   }
-  
-  // MARK: - API
-  // MARK: - Helpers
 }
