@@ -31,7 +31,7 @@
 		549AE64024DA6080004C6F1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 549AE63E24DA6080004C6F1E /* LaunchScreen.storyboard */; };
 		549AE65724DA9071004C6F1E /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AE65624DA9071004C6F1E /* MainTabController.swift */; };
 		549AE66124DA94E1004C6F1E /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AE66024DA94E1004C6F1E /* FeedController.swift */; };
-		549AE66324DA94F6004C6F1E /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AE66224DA94F6004C6F1E /* ExploreController.swift */; };
+		549AE66324DA94F6004C6F1E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AE66224DA94F6004C6F1E /* SearchController.swift */; };
 		549AE66524DA94FF004C6F1E /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AE66424DA94FF004C6F1E /* NotificationsController.swift */; };
 		549AE66724DA9508004C6F1E /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AE66624DA9508004C6F1E /* ConversationsController.swift */; };
 		549AE66924DA9EC0004C6F1E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AE66824DA9EC0004C6F1E /* Extensions.swift */; };
@@ -82,7 +82,7 @@
 		549AE64124DA6080004C6F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		549AE65624DA9071004C6F1E /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		549AE66024DA94E1004C6F1E /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
-		549AE66224DA94F6004C6F1E /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
+		549AE66224DA94F6004C6F1E /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		549AE66424DA94FF004C6F1E /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		549AE66624DA9508004C6F1E /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		549AE66824DA9EC0004C6F1E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 				549AE66A24DAB2D7004C6F1E /* Authentication */,
 				549AE65624DA9071004C6F1E /* MainTabController.swift */,
 				549AE66024DA94E1004C6F1E /* FeedController.swift */,
-				549AE66224DA94F6004C6F1E /* ExploreController.swift */,
+				549AE66224DA94F6004C6F1E /* SearchController.swift */,
 				549AE66424DA94FF004C6F1E /* NotificationsController.swift */,
 				549AE66624DA9508004C6F1E /* ConversationsController.swift */,
 				54B69041251B94A0000F66D0 /* UploadTweetController.swift */,
@@ -409,7 +409,7 @@
 				54B69050251CF49E000F66D0 /* ProfileHeader.swift in Sources */,
 				5423B17E25223D5F00AFCC42 /* EditProfileCell.swift in Sources */,
 				54B6904A251BE4E0000F66D0 /* TweetCell.swift in Sources */,
-				549AE66324DA94F6004C6F1E /* ExploreController.swift in Sources */,
+				549AE66324DA94F6004C6F1E /* SearchController.swift in Sources */,
 				5430546F2520ECB000ABD549 /* Notification.swift in Sources */,
 				543B5D72251B3C680003AB2B /* AuthService.swift in Sources */,
 				54B69056251DA2FD000F66D0 /* ProfileHeaderViewModel.swift in Sources */,
